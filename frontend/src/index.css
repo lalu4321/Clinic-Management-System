@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Variables ── */
+:root {
+  --radius: 0.75rem;
+  --background: 210 20% 98%;
+  --foreground: 195 50% 8%;
+  --card: 0 0% 100%;
+  --card-foreground: 195 50% 8%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 195 50% 8%;
+  --primary: 193 100% 24%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 195 15% 92%;
+  --secondary-foreground: 195 50% 8%;
+  --muted: 195 12% 92%;
+  --muted-foreground: 195 15% 40%;
+  --accent: 193 100% 24%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 72% 41%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 195 20% 82%;
+  --input: 195 20% 82%;
+  --ring: 193 100% 24%;
+  --chart-1: 193 100% 24%;
+  --chart-2: 33 100% 27%;
+  --chart-3: 195 25% 35%;
+  --chart-4: 40 100% 75%;
+  --chart-5: 193 50% 50%;
+}
+
+/* ── Base Reset ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #f7f9fb;
+  color: #0d1b1e;
+  line-height: 1.6;
+}
+
+/* ── Material Symbols ── */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c4d8dc;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6b8a90;
+}

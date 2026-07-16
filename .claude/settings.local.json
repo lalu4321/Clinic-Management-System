@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find \"f:/CMS April/Clinic_Management_System/Clinic_Management_System/Clinic_Management_System/frontend/src\" -type f \\\\\\( -name \"*.jsx\" -o -name \"*.js\" \\\\\\) -exec grep -l \"from ['\\\\\"]\\\\./\" {} \\\\;)",
+      "Bash(python migrate_imports.py)",
+      "Bash(grep -rn \"from ['\\\\\"\\\\`]\\\\.\\\\.\" --include=\"*.jsx\" --include=\"*.js\")",
+      "Read(//tmp/**)",
+      "Bash(python manage.py migrate reception)",
+      "Bash(python manage.py test reception --verbosity=2)",
+      "Bash(python manage.py test tests --verbosity=1)",
+      "Bash(python manage.py test tests.test_integration --verbosity=1)",
+      "Bash(python -c ':*)",
+      "Bash(python manage.py shell -c ':*)",
+      "Bash(pip install:*)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); [print\\(k,v\\) for k,v in {**d.get\\('dependencies',{}\\), **d.get\\('devDependencies',{}\\)}.items\\(\\) if k in \\('react','vite','react-router-dom','react-hook-form','zod','@tanstack/react-query'\\)]\")"
+    ]
+  }
+}
